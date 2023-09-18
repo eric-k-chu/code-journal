@@ -57,3 +57,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     $entryList.appendChild(renderEntry(entry));
   }
 });
+
+// const $noEntries = document.querySelector('#no-entries');
+// function toggleNoEntries() {
+//   $noEntries.classList.toggle('hidden');
+// }
