@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
-    <header class="header-container">
+  <body class="bg-light-gray">
+    <header class="text-white bg-purple header">
       <div class="container">
         <div class="column-full">
           <h1>Code Journal</h1>
@@ -24,7 +24,27 @@
       </div>
     </header>
     <main class="container">
-      <div data-view="entry-form"></div>
+      <div data-view="entry-form">
+        <div class="column-full">
+          <form>
+            <h2>New Entry</h2>
+            <div class="photo-wrapper">
+              <img
+                src="images/placeholder-image-square.jpg"
+                alt="placeholder" />
+            </div>
+            <label for="title" class="text-sm">Title</label>
+            <input class="inputs" type="text" id="title" name="title" />
+            <label for="photo-url" class="text-sm">Photo URL</label>
+            <input class="inputs" type="url" id="photo-url" name="photo-url" />
+            <label for="notes" class="text-sm">Notes</label>
+            <input class="inputs-lg" type="text" id="notes" name="notes" />
+            <div class="row justify-end">
+              <button class="bg-purple text-white save-button">SAVE</button>
+            </div>
+          </form>
+        </div>
+      </div>
       <div data-view="entries" class="hidden"></div>
     </main>
     <script src="js/data.js"></script>
