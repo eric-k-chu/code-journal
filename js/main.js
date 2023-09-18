@@ -62,3 +62,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
 // function toggleNoEntries() {
 //   $noEntries.classList.toggle('hidden');
 // }
+
+// const $entryForm = document.querySelector('[data-view="entry-form"]')
+// const $entries = document.querySelector('[data-view="entries"]')
+// function viewSwap(view) {
+//   if (view === 'entries') {
+//     data.view = view;
+
+//   } else if (view === 'entry-form') {
+//     data.view = view;
+
+//   }
+// }
