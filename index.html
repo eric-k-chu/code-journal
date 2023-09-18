@@ -24,12 +24,12 @@
       </div>
     </header>
     <main class="container">
-      <div data-view="entry-form">
+      <div data-view="entry-form" class="hidden">
         <div class="column-full">
           <form>
             <div class="row">
               <div class="column-full">
-                <h2>New Entry</h2>
+                <h1>New Entry</h1>
               </div>
             </div>
             <div class="row">
@@ -78,9 +78,59 @@
           </form>
         </div>
       </div>
-      <div data-view="entries" class="hidden">
+      <div data-view="entries">
         <div class="column-full">
-          <ul></ul>
+          <div class="row justify-between">
+            <h1>Entries</h1>
+            <button
+              type="button"
+              class="bg-purple text-white new-button font-serif font-bold text-base">
+              NEW
+            </button>
+          </div>
+          <div class="row">
+            <ul class="entries-list">
+              <li class="row">
+                <div class="column-half">
+                  <div class="photo-wrapper">
+                    <img
+                      src="images/placeholder-image-square.jpg"
+                      alt="placeholder" />
+                  </div>
+                </div>
+                <div class="column-half">
+                  <p class="font-bold">Title</p>
+                  <p>Notes</p>
+                </div>
+              </li>
+              <li class="row">
+                <div class="column-half">
+                  <div class="photo-wrapper">
+                    <img
+                      src="images/placeholder-image-square.jpg"
+                      alt="placeholder" />
+                  </div>
+                </div>
+                <div class="column-half">
+                  <p class="font-bold">Title</p>
+                  <p>Notes</p>
+                </div>
+              </li>
+              <li class="row">
+                <div class="column-half">
+                  <div class="photo-wrapper">
+                    <img
+                      src="images/placeholder-image-square.jpg"
+                      alt="placeholder" />
+                  </div>
+                </div>
+                <div class="column-half">
+                  <p class="font-bold">Title</p>
+                  <p>Notes</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </main>

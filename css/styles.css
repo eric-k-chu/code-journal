@@ -35,6 +35,14 @@
   border: 1px solid gray;
 }
 
+.new-button {
+  border-radius: 5px;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid gray;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .align-end {
   align-items: flex-end;
 }
@@ -57,4 +65,26 @@
 
 .mb-2 {
   margin-bottom: 2rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.font-serif {
+  font-family: serif;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.entries-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
