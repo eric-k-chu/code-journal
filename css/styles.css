@@ -3,7 +3,7 @@
 }
 
 .inputs,
-.inputs-lg {
+.text-area {
   width: 100%;
   border-radius: 5px;
   border: 1px solid lightgray;
@@ -13,9 +13,7 @@
   margin-bottom: 1.5rem;
 }
 
-.inputs-lg {
-  padding-bottom: 5rem;
-  line-height: 3;
+.text-area {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }

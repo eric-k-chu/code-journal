@@ -42,19 +42,32 @@
               </div>
               <div class="column-half">
                 <label for="title" class="text-sm">Title</label>
-                <input class="inputs" type="text" id="title" name="title" />
+                <input
+                  class="inputs"
+                  type="text"
+                  id="title"
+                  name="title"
+                  required />
                 <label for="photo-url" class="text-sm">Photo URL</label>
                 <input
                   class="inputs"
                   type="url"
                   id="photo-url"
-                  name="photo-url" />
+                  name="photo-url"
+                  required />
               </div>
             </div>
             <div class="row mt-1">
               <div class="column-full">
                 <label for="notes" class="text-sm">Notes</label>
-                <input class="inputs-lg" type="text" id="notes" name="notes" />
+                <textarea
+                  class="text-area"
+                  id="notes"
+                  name="notes"
+                  rows="8"
+                  cols="33"
+                  required>
+                </textarea>
               </div>
             </div>
             <div class="row">
