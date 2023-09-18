@@ -1,5 +1,6 @@
 .photo-wrapper img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .inputs,
@@ -7,15 +8,8 @@
   width: 100%;
   border-radius: 5px;
   border: 1px solid lightgray;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.text-area {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .bg-light-gray {
@@ -45,10 +39,6 @@
   align-items: flex-end;
 }
 
-.text-sm {
-  font-size: 0.8rem;
-}
-
 .flex {
   display: flex;
 }
@@ -59,4 +49,12 @@
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
 }
