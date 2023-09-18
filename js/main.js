@@ -19,3 +19,41 @@ $form.addEventListener('submit', function (event) {
   $photo.src = 'images/placeholder-image-square.jpg';
   $form.reset();
 });
+
+function renderEntry(entry) {
+  const $newEntry = document.createElement('li');
+  const $divColumnIMG = document.createElement('div');
+  const $divPhotoWrapper = document.createElement('div');
+  const $img = document.createElement('img');
+  const $divColumnText = document.createElement('div');
+  const $paragrahTitle = document.createElement('p');
+  const $titleText = document.createTextNode(entry.title);
+  const $paragrahNotes = document.createElement('p');
+  const $notesText = document.createTextNode(entry.notes);
+
+  $newEntry.setAttribute('class', 'row');
+  $divColumnIMG.setAttribute('class', 'column-half');
+  $divPhotoWrapper.setAttribute('class', 'photo-wrapper');
+  $img.setAttribute('src', entry.photoUrl);
+  $divColumnText.setAttribute('class', 'column-half');
+  $paragrahTitle.setAttribute('class', 'font-bold');
+  $paragrahTitle.appendChild($titleText);
+  $paragrahNotes.appendChild($notesText);
+
+  $newEntry.appendChild($divColumnIMG);
+  $divColumnIMG.appendChild($divPhotoWrapper);
+  $divPhotoWrapper.appendChild($img);
+  $newEntry.appendChild($divColumnText);
+  $divColumnText.appendChild($paragrahTitle);
+  $divColumnText.appendChild($paragrahNotes);
+
+  return $newEntry;
+}
+
+const $entryList = document.querySelector('.entries-list');
+
+document.addEventListener('DOMContentLoaded', function (event) {
+  for (const entry of data.entries) {
+    $entryList.appendChild(renderEntry(entry));
+  }
+});
