@@ -27,20 +27,40 @@
       <div data-view="entry-form">
         <div class="column-full">
           <form>
-            <h2>New Entry</h2>
-            <div class="photo-wrapper">
-              <img
-                src="images/placeholder-image-square.jpg"
-                alt="placeholder" />
+            <div class="row">
+              <div class="column-full">
+                <h2>New Entry</h2>
+              </div>
             </div>
-            <label for="title" class="text-sm">Title</label>
-            <input class="inputs" type="text" id="title" name="title" />
-            <label for="photo-url" class="text-sm">Photo URL</label>
-            <input class="inputs" type="url" id="photo-url" name="photo-url" />
-            <label for="notes" class="text-sm">Notes</label>
-            <input class="inputs-lg" type="text" id="notes" name="notes" />
-            <div class="row justify-end">
-              <button class="bg-purple text-white save-button">SAVE</button>
+            <div class="row">
+              <div class="column-half">
+                <div class="photo-wrapper">
+                  <img
+                    src="images/placeholder-image-square.jpg"
+                    alt="placeholder" />
+                </div>
+              </div>
+              <div class="column-half">
+                <label for="title" class="text-sm">Title</label>
+                <input class="inputs" type="text" id="title" name="title" />
+                <label for="photo-url" class="text-sm">Photo URL</label>
+                <input
+                  class="inputs"
+                  type="url"
+                  id="photo-url"
+                  name="photo-url" />
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="column-full">
+                <label for="notes" class="text-sm">Notes</label>
+                <input class="inputs-lg" type="text" id="notes" name="notes" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-full flex flex-col align-end">
+                <button class="bg-purple text-white save-button">SAVE</button>
+              </div>
             </div>
           </form>
         </div>
