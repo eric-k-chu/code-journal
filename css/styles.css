@@ -1,0 +1,60 @@
+.photo-wrapper img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.inputs,
+.text-area {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.bg-light-gray {
+  background-color: #eee;
+}
+
+.bg-purple {
+  background-color: #4c2676;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.header {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+.save-button {
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid gray;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
