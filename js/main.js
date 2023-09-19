@@ -116,6 +116,7 @@ $entryList.addEventListener('click', function (event) {
   }
   $form[0].value = data.editing.title;
   $form[1].value = data.editing.photoUrl;
+  $photo.src = $photoUrl.value;
   $form[2].textContent = data.editing.notes;
   $entryFormHeader.textContent = 'Edit Entry';
 });
