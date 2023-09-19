@@ -1,6 +1,12 @@
 const $photoUrl = document.querySelector('#photo-url');
 const $photo = document.querySelector('.photo-wrapper > img');
 const $form = document.querySelector('form');
+const $entryList = document.querySelector('.entries-list');
+const $entryForm = document.querySelector('[data-view="entry-form"]');
+const $entries = document.querySelector('[data-view="entries"]');
+const $entriesAnchor = document.querySelector('.tabs');
+const $newEntryButton = document.querySelector('.new-button');
+const $noEntries = document.querySelector('#no-entries');
 
 $photoUrl.addEventListener('input', function (event) {
   $photo.src = $photoUrl.value;
@@ -16,6 +22,9 @@ $form.addEventListener('submit', function (event) {
   };
   data.nextEntryId++;
   data.entries.unshift(entry);
+  $entryList.appendChild(renderEntry(entry));
+  viewSwap('entries');
+  toggleNoEntries();
   $photo.src = 'images/placeholder-image-square.jpg';
   $form.reset();
 });
@@ -50,21 +59,16 @@ function renderEntry(entry) {
   return $newEntry;
 }
 
-const $entryList = document.querySelector('.entries-list');
-
 document.addEventListener('DOMContentLoaded', function (event) {
   for (const entry of data.entries) {
     $entryList.appendChild(renderEntry(entry));
   }
 });
 
-// const $noEntries = document.querySelector('#no-entries');
-// function toggleNoEntries() {
-//   $noEntries.classList.toggle('hidden');
-// }
+function toggleNoEntries() {
+  $noEntries.classList.toggle('hidden');
+}
 
-const $entryForm = document.querySelector('[data-view="entry-form"]');
-const $entries = document.querySelector('[data-view="entries"]');
 function viewSwap(view) {
   if (view === 'entries') {
     data.view = view;
@@ -75,12 +79,10 @@ function viewSwap(view) {
   $entries.classList.toggle('hidden');
 }
 
-const $entriesAnchor = document.querySelector('.tabs');
 $entriesAnchor.addEventListener('click', function (event) {
   viewSwap('entries');
 });
 
-const $newEntryButton = document.querySelector('.new-button');
 $newEntryButton.addEventListener('click', function (event) {
   viewSwap('entry-Form');
 });
