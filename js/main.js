@@ -40,8 +40,10 @@ function renderEntry(entry) {
   const $divPhotoWrapper = document.createElement('div');
   const $img = document.createElement('img');
   const $divColumnText = document.createElement('div');
+  const $divRow = document.createElement('div');
   const $paragrahTitle = document.createElement('p');
   const $titleText = document.createTextNode(entry.title);
+  const $editIcon = document.createElement('i');
   const $paragrahNotes = document.createElement('p');
   const $notesText = document.createTextNode(entry.notes);
 
@@ -50,7 +52,9 @@ function renderEntry(entry) {
   $divPhotoWrapper.setAttribute('class', 'photo-wrapper');
   $img.setAttribute('src', entry.photoUrl);
   $divColumnText.setAttribute('class', 'column-half');
+  $divRow.classList.add('row', 'justify-between');
   $paragrahTitle.setAttribute('class', 'font-bold');
+  $editIcon.classList.add('fa', 'fa-pencil', 'edit-icon');
   $paragrahTitle.appendChild($titleText);
   $paragrahNotes.appendChild($notesText);
 
@@ -58,7 +62,9 @@ function renderEntry(entry) {
   $divColumnIMG.appendChild($divPhotoWrapper);
   $divPhotoWrapper.appendChild($img);
   $newEntry.appendChild($divColumnText);
-  $divColumnText.appendChild($paragrahTitle);
+  $divColumnText.appendChild($divRow);
+  $divRow.appendChild($paragrahTitle);
+  $divRow.appendChild($editIcon);
   $divColumnText.appendChild($paragrahNotes);
 
   return $newEntry;
