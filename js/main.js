@@ -63,14 +63,24 @@ document.addEventListener('DOMContentLoaded', function (event) {
 //   $noEntries.classList.toggle('hidden');
 // }
 
-// const $entryForm = document.querySelector('[data-view="entry-form"]')
-// const $entries = document.querySelector('[data-view="entries"]')
-// function viewSwap(view) {
-//   if (view === 'entries') {
-//     data.view = view;
+const $entryForm = document.querySelector('[data-view="entry-form"]');
+const $entries = document.querySelector('[data-view="entries"]');
+function viewSwap(view) {
+  if (view === 'entries') {
+    data.view = view;
+  } else if (view === 'entry-form') {
+    data.view = view;
+  }
+  $entryForm.classList.toggle('hidden');
+  $entries.classList.toggle('hidden');
+}
 
-//   } else if (view === 'entry-form') {
-//     data.view = view;
+const $entriesAnchor = document.querySelector('.tabs');
+$entriesAnchor.addEventListener('click', function (event) {
+  viewSwap('entries');
+});
 
-//   }
-// }
+const $newEntryButton = document.querySelector('.new-button');
+$newEntryButton.addEventListener('click', function (event) {
+  viewSwap('entry-Form');
+});
