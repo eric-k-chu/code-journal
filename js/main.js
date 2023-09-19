@@ -15,22 +15,23 @@ $photoUrl.addEventListener('input', function (event) {
 
 $form.addEventListener('submit', function (event) {
   event.preventDefault();
-  const entry = {
-    title: $form[0].value,
-    photoUrl: $form[1].value,
-    notes: $form[2].value,
-    entryID: data.nextEntryId,
-  };
-  data.nextEntryId++;
-  data.entries.unshift(entry);
-  $entryList.appendChild(renderEntry(entry));
-  viewSwap('entries');
+  if (data.editing) {
+    const entry = {
+      title: $form[0].value,
+      photoUrl: $form[1].value,
+      notes: $form[2].value,
+      entryID: data.nextEntryId,
+    };
+    data.nextEntryId++;
+    data.entries.unshift(entry);
+    $entryList.appendChild(renderEntry(entry));
+    viewSwap('entries');
 
-  // on first submit remove the no entries element
-  if (data.entries.length === 1) {
-    toggleNoEntries();
+    // on first submit remove the no entries element
+    if (data.entries.length === 1) {
+      toggleNoEntries();
+    }
   }
-
   $photo.src = 'images/placeholder-image-square.jpg';
   $form.reset();
 });
