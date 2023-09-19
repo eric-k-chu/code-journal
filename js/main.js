@@ -107,4 +107,10 @@ $newEntryButton.addEventListener('click', function (event) {
 
 $entryList.addEventListener('click', function (event) {
   viewSwap('entry-form');
+  const currEntryID = event.target.closest('li').getAttribute('data-entry-id');
+  for (const entry of data.entries) {
+    if (currEntryID === entry.entryID.toString()) {
+      data.editing = entry;
+    }
+  }
 });
