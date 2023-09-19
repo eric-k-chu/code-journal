@@ -95,3 +95,7 @@
   margin-left: 1rem;
   font-size: large;
 }
+
+.tabs:hover {
+  cursor: pointer;
+}
