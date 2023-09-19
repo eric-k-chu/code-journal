@@ -62,10 +62,10 @@ function renderEntry(entry) {
 document.addEventListener('DOMContentLoaded', function (event) {
   for (const entry of data.entries) {
     $entryList.appendChild(renderEntry(entry));
-    viewSwap(data.view);
-    if (data.entries.length > 0) {
-      toggleNoEntries();
-    }
+  }
+  viewSwap(data.view);
+  if (data.entries.length > 0) {
+    toggleNoEntries();
   }
 });
 
@@ -78,7 +78,7 @@ function viewSwap(view) {
     data.view = view;
     $entryForm.classList.toggle('hidden');
     $entries.classList.toggle('hidden');
-  } else if (view === 'entry-form' && data.view !== 'entry-form') {
+  } else if (view === 'entry-form') {
     data.view = view;
     $entryForm.classList.toggle('hidden');
     $entries.classList.toggle('hidden');
