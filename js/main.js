@@ -15,13 +15,14 @@ $photoUrl.addEventListener('input', function (event) {
 
 $form.addEventListener('submit', function (event) {
   event.preventDefault();
+  const entry = {
+    title: $form[0].value,
+    photoUrl: $form[1].value,
+    notes: $form[2].value,
+    entryID: data.nextEntryId,
+  };
+
   if (data.editing) {
-    const entry = {
-      title: $form[0].value,
-      photoUrl: $form[1].value,
-      notes: $form[2].value,
-      entryID: data.nextEntryId,
-    };
     data.nextEntryId++;
     data.entries.unshift(entry);
     $entryList.appendChild(renderEntry(entry));
@@ -31,6 +32,9 @@ $form.addEventListener('submit', function (event) {
     if (data.entries.length === 1) {
       toggleNoEntries();
     }
+  } else {
+    entry.entryID = data.editing.entryID;
+    data.entries[data.editing.entryID + 1] = entry;
   }
   $photo.src = 'images/placeholder-image-square.jpg';
   $form.reset();
