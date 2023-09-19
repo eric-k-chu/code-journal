@@ -104,3 +104,7 @@ $entriesAnchor.addEventListener('click', function (event) {
 $newEntryButton.addEventListener('click', function (event) {
   viewSwap('entry-form');
 });
+
+$entryList.addEventListener('click', function (event) {
+  viewSwap('entry-form');
+});

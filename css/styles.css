@@ -98,7 +98,8 @@
 
 .tabs:hover,
 .save-button,
-.new-button {
+.new-button,
+.edit-icon {
   cursor: pointer;
 }
 
