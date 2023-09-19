@@ -96,6 +96,12 @@
   font-size: large;
 }
 
-.tabs:hover {
+.tabs:hover,
+.save-button,
+.new-button {
   cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
 }

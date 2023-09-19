@@ -24,7 +24,12 @@ $form.addEventListener('submit', function (event) {
   data.entries.unshift(entry);
   $entryList.appendChild(renderEntry(entry));
   viewSwap('entries');
-  toggleNoEntries();
+
+  // on first submit remove the no entries element
+  if (data.entries.length === 1) {
+    toggleNoEntries();
+  }
+
   $photo.src = 'images/placeholder-image-square.jpg';
   $form.reset();
 });
@@ -64,13 +69,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
     $entryList.appendChild(renderEntry(entry));
   }
   viewSwap(data.view);
-  if (data.entries.length > 0) {
-    toggleNoEntries();
-  }
+  toggleNoEntries();
 });
 
 function toggleNoEntries() {
-  $noEntries.classList.toggle('hidden');
+  if (data.entries.length > 0) {
+    $noEntries.classList.toggle('hidden');
+  }
 }
 
 function viewSwap(view) {
