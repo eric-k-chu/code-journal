@@ -7,6 +7,7 @@ const $entries = document.querySelector('[data-view="entries"]');
 const $entriesAnchor = document.querySelector('.tabs');
 const $newEntryButton = document.querySelector('.new-button');
 const $noEntries = document.querySelector('#no-entries');
+const $entryFormHeader = document.querySelector('#entry-form-header');
 
 $photoUrl.addEventListener('input', function (event) {
   $photo.src = $photoUrl.value;
@@ -113,4 +114,8 @@ $entryList.addEventListener('click', function (event) {
       data.editing = entry;
     }
   }
+  $form[0].value = data.editing.title;
+  $form[1].value = data.editing.photoUrl;
+  $form[2].textContent = data.editing.notes;
+  $entryFormHeader.textContent = 'Edit Entry';
 });
