@@ -67,6 +67,7 @@ function renderEntry(entry) {
   $divRow.appendChild($editIcon);
   $divColumnText.appendChild($paragrahNotes);
 
+  $newEntry.setAttribute('data-entry-id', entry.entryID);
   return $newEntry;
 }
 
