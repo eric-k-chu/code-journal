@@ -62,6 +62,10 @@ function renderEntry(entry) {
 document.addEventListener('DOMContentLoaded', function (event) {
   for (const entry of data.entries) {
     $entryList.appendChild(renderEntry(entry));
+    viewSwap(data.view);
+    if (data.entries.length > 0) {
+      toggleNoEntries();
+    }
   }
 });
 
