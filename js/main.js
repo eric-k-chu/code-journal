@@ -74,13 +74,15 @@ function toggleNoEntries() {
 }
 
 function viewSwap(view) {
-  if (view === 'entries') {
+  if (view === 'entries' && data.view !== 'entries') {
     data.view = view;
-  } else if (view === 'entry-form') {
+    $entryForm.classList.toggle('hidden');
+    $entries.classList.toggle('hidden');
+  } else if (view === 'entry-form' && data.view !== 'entry-form') {
     data.view = view;
+    $entryForm.classList.toggle('hidden');
+    $entries.classList.toggle('hidden');
   }
-  $entryForm.classList.toggle('hidden');
-  $entries.classList.toggle('hidden');
 }
 
 $entriesAnchor.addEventListener('click', function (event) {
@@ -88,5 +90,5 @@ $entriesAnchor.addEventListener('click', function (event) {
 });
 
 $newEntryButton.addEventListener('click', function (event) {
-  viewSwap('entry-Form');
+  viewSwap('entry-form');
 });
