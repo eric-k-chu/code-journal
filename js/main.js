@@ -22,11 +22,10 @@ $form.addEventListener('submit', function (event) {
     entryID: data.nextEntryId,
   };
 
-  if (data.editing) {
+  if (data.editing === null) {
     data.nextEntryId++;
     data.entries.unshift(entry);
-    $entryList.appendChild(renderEntry(entry));
-    viewSwap('entries');
+    $entryList.prepend(renderEntry(entry));
 
     // on first submit remove the no entries element
     if (data.entries.length === 1) {
@@ -34,8 +33,14 @@ $form.addEventListener('submit', function (event) {
     }
   } else {
     entry.entryID = data.editing.entryID;
-    data.entries[data.editing.entryID + 1] = entry;
+    const entryIndex = data.entries.length - data.editing.entryID;
+    const $list = document.querySelectorAll('li');
+    data.entries[entryIndex] = entry;
+    $list[entryIndex].replaceWith(renderEntry(entry));
+    $entryFormHeader.textContent = 'New Entry';
+    data.editing = null;
   }
+  viewSwap('entries');
   $photo.src = 'images/placeholder-image-square.jpg';
   $form.reset();
 });
