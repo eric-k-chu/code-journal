@@ -43,6 +43,13 @@
   margin-bottom: 1.5rem;
 }
 
+.del-button {
+  border: none;
+  text-decoration: underline;
+  color: red;
+  background-color: #eee;
+}
+
 .align-end {
   align-items: flex-end;
 }
@@ -96,11 +103,18 @@
   font-size: large;
 }
 
-.tabs:hover,
+.tabs,
 .save-button,
 .new-button,
-.edit-icon {
+.edit-icon,
+.del-button,
+.del-cancel-button,
+.del-conf-button {
   cursor: pointer;
+}
+
+.del-button:hover {
+  background-color: #eee;
 }
 
 .text-center {
@@ -109,4 +123,38 @@
 
 .edit-icon {
   padding-top: 1rem;
+}
+
+.modal-delete {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.75);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  max-width: 330px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.del-cancel-button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #b6b6b6;
+}
+
+.del-conf-button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #dc2626;
 }
