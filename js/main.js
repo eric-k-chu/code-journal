@@ -9,6 +9,7 @@ const $newEntryButton = document.querySelector('.new-button');
 const $noEntries = document.querySelector('#no-entries');
 const $entryFormHeader = document.querySelector('#entry-form-header');
 const $delButton = document.querySelector('.del-button');
+const $delEntryModal = document.querySelector('.modal-delete');
 
 $photoUrl.addEventListener('input', function (event) {
   $photo.src = $photoUrl.value;
@@ -132,4 +133,8 @@ $entryList.addEventListener('click', function (event) {
   $form[2].textContent = data.editing.notes;
   $entryFormHeader.textContent = 'Edit Entry';
   $delButton.classList.toggle('hidden');
+});
+
+$delButton.addEventListener('click', function (event) {
+  $delEntryModal.style.display = 'flex';
 });

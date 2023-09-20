@@ -107,7 +107,9 @@
 .save-button,
 .new-button,
 .edit-icon,
-.del-button {
+.del-button,
+.del-cancel-button,
+.del-conf-button {
   cursor: pointer;
 }
 
@@ -121,4 +123,42 @@
 
 .edit-icon {
   padding-top: 1rem;
+}
+
+.modal-delete {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.75);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  max-width: 330px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.del-cancel-button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #b6b6b6;
+}
+
+.del-conf-button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #dc2626;
+}
+
+.align-self-center {
+  align-self: center;
 }
