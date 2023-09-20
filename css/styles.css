@@ -98,10 +98,15 @@
 
 .tabs:hover,
 .save-button,
-.new-button {
+.new-button,
+.edit-icon {
   cursor: pointer;
 }
 
 .text-center {
   text-align: center;
+}
+
+.edit-icon {
+  padding-top: 1rem;
 }
