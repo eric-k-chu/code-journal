@@ -8,6 +8,7 @@ const $entriesAnchor = document.querySelector('.tabs');
 const $newEntryButton = document.querySelector('.new-button');
 const $noEntries = document.querySelector('#no-entries');
 const $entryFormHeader = document.querySelector('#entry-form-header');
+const $delButton = document.querySelector('.del-button');
 
 $photoUrl.addEventListener('input', function (event) {
   $photo.src = $photoUrl.value;
@@ -38,6 +39,7 @@ $form.addEventListener('submit', function (event) {
     data.entries[entryIndex] = entry;
     $list[entryIndex].replaceWith(renderEntry(entry));
     $entryFormHeader.textContent = 'New Entry';
+    $delButton.classList.toggle('hidden');
     data.editing = null;
   }
   viewSwap('entries');
@@ -129,4 +131,5 @@ $entryList.addEventListener('click', function (event) {
   $photo.src = $photoUrl.value;
   $form[2].textContent = data.editing.notes;
   $entryFormHeader.textContent = 'Edit Entry';
+  $delButton.classList.toggle('hidden');
 });

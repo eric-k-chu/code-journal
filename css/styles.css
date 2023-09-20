@@ -43,6 +43,13 @@
   margin-bottom: 1.5rem;
 }
 
+.del-button {
+  border: none;
+  text-decoration: underline;
+  color: red;
+  background-color: #eee;
+}
+
 .align-end {
   align-items: flex-end;
 }
@@ -96,11 +103,16 @@
   font-size: large;
 }
 
-.tabs:hover,
+.tabs,
 .save-button,
 .new-button,
-.edit-icon {
+.edit-icon,
+.del-button {
   cursor: pointer;
+}
+
+.del-button:hover {
+  background-color: #eee;
 }
 
 .text-center {
